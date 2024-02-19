@@ -1,8 +1,10 @@
-# GameArg
+<br>
+<br>
 <p align="center">
 <img src="logo.png" alt="gamearg logo" style="width:400px;"/>
 </p>
 
+# gamearg
 A Reasoning Tool for Argumentation Framework powered by Logic Programming and Game Theory
 
 ## Running Locally
