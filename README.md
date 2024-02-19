@@ -1,4 +1,8 @@
 # GameArg
+<p align="center">
+<img src="logo.png" alt="gamearg logo" style="width:400px;"/>
+</p>
+
 A Reasoning Tool for Argumentation Framework powered by Logic Programming and Game Theory
 
 ## Running Locally
@@ -38,7 +42,7 @@ conda create --name gamearg pip python=3.10
 conda activate gamearg
 ```
 
-# Check out our papers
+## Check out our papers
 Ludäscher, B., & Xia, Y. (2023). [Games and Argumentation: Time for a Family Reunion!](https://arxiv.org/pdf/2309.06620.pdf). arXiv preprint arXiv:2309.06620.
 
 Ludäscher, B., Bowers, S., & Xia, Y. (2023). [Games, Queries, and Argumentation Frameworks: Time for a Family Reunion!](https://ceur-ws.org/Vol-3546/paper06.pdf).
