@@ -1,0 +1,25 @@
+digraph {
+    rankdir="TB"
+    node [style=filled fontname="Palatino" fontsize=14]
+    node [fillcolor="#AAFFAA"]
+    "5" [label=" p5.1"]
+    node [fillcolor="#FFAAAA"]
+    "2" [label=" p2.0"]
+    node [fillcolor="#d5fdce"]
+    "3" [label="p3.∞"]
+    "4" [label="p4.∞"]
+    node [fillcolor="#f7cccb"]
+    "1" [label="p1.∞"]
+    edge[labeldistance=1.5 fontsize=12]
+    edge [color="#00BB00" style="solid" dir="forward" taillabel="∞"]
+           "3" -> "1" 
+           "4" -> "1" 
+    edge [color="#00BB00" style="solid" dir="forward" taillabel="1"]
+           "5" -> "2" 
+    edge [color="#CC0000" style="solid" dir="forward" taillabel="∞"]
+           "1" -> "4" 
+    edge [color="black" style="dotted" dir="forward" taillabel="" constraint=false]
+           "5" -> "3" 
+    {rank = max 2}
+    {rank = min 5}
+}

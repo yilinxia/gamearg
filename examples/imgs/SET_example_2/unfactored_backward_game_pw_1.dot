@@ -1,0 +1,16 @@
+digraph {
+    // Node defaults can be set here if needed
+    "2" [style="filled" fillcolor="#FFAAAA" label=" p2.0" fontsize=14]
+    "5" [style="filled" fillcolor="#AAFFAA" label=" p5.1" fontsize=14]
+    "3" [style="filled" fillcolor="#f7cccb" label="p3.∞" fontsize=14]
+    "4" [style="filled" fillcolor="#f7cccb" label="p4.∞" fontsize=14]
+    "1" [style="filled" fillcolor="#d5fdce" label="p1.∞" fontsize=14]
+    edge[labeldistance=1.5 fontsize=12]
+    "3" -> "1" [color="#CC0000" style="solid" dir="forward" taillabel="∞" ]
+    "4" -> "1" [color="#CC0000" style="solid" dir="forward" taillabel="∞" ]
+    "5" -> "2" [color="#00BB00" style="solid" dir="forward" taillabel="1" ]
+    "5" -> "3" [color="#00BB00:#00BB00" style="dashed" dir="forward" taillabel="" constraint=false]
+    "1" -> "4" [color="#00BB00" style="solid" dir="forward" taillabel="∞" ]
+    {rank = max 2}
+    {rank = min 5}
+}

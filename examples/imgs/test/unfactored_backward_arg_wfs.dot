@@ -1,0 +1,24 @@
+digraph {
+    // Node defaults can be set here if needed
+    "a" [style="filled" fillcolor="#40cfff" label="∀ a.0" fontsize=14]
+    "b" [style="filled" fillcolor="#40cfff" label="∀ b.0" fontsize=14]
+    "c" [style="filled" fillcolor="#ffb763" label="∃ c.1" fontsize=14]
+    "d1" [style="filled" fillcolor="#FFFFAA" label="d1.∞" fontsize=14]
+    "d2" [style="filled" fillcolor="#FFFFAA" label="d2.∞" fontsize=14]
+    "e" [style="filled" fillcolor="#FFFFAA" label="e.∞" fontsize=14]
+    "f" [style="filled" fillcolor="#FFFFAA" label="f.∞" fontsize=14]
+    "g" [style="filled" fillcolor="#FFFFAA" label="g.∞" fontsize=14]
+    edge[labeldistance=1.5 fontsize=12]
+    "c" -> "a" [color="#cc8400" style="solid" dir="back" taillabel="1" ]
+    "c" -> "b" [color="#cc8400" style="solid" dir="back" taillabel="1" ]
+    "d1" -> "c" [color="black" style="dotted" dir="back" taillabel="" constraint=false]
+    "d2" -> "c" [color="black" style="dotted" dir="back" taillabel="" constraint=false]
+    "d2" -> "d1" [color="#AAAA00" style="solid" dir="back" taillabel="∞" ]
+    "d1" -> "d2" [color="#AAAA00" style="solid" dir="back" taillabel="∞" ]
+    "e" -> "d1" [color="#AAAA00" style="solid" dir="back" taillabel="∞" ]
+    "e" -> "g" [color="#AAAA00" style="solid" dir="back" taillabel="∞" ]
+    "f" -> "e" [color="#AAAA00" style="solid" dir="back" taillabel="∞" ]
+    "g" -> "f" [color="#AAAA00" style="solid" dir="back" taillabel="∞" ]
+    {rank = max a b}
+    {rank = min c}
+}

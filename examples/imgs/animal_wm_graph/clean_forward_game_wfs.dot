@@ -1,0 +1,73 @@
+digraph {
+    rankdir="TB"
+    node [style=filled fontname="Palatino" fontsize=14]
+    node [fillcolor="#AAFFAA"]
+    "u" [label=" u.1"]
+    "b" [label=" b.1"]
+    "c" [label=" c.1"]
+    "d" [label=" d.1"]
+    "i" [label=" i.1"]
+    "g" [label=" g.1"]
+    "h" [label=" h.1"]
+    "s" [label=" s.3"]
+    node [fillcolor="#FFAAAA"]
+    "v" [label=" v.0"]
+    "z" [label=" z.0"]
+    "y" [label=" y.0"]
+    "x" [label=" x.0"]
+    "w" [label=" w.0"]
+    "q" [label=" q.0"]
+    "l" [label=" l.0"]
+    "k" [label=" k.0"]
+    "a" [label=" a.2"]
+    "t" [label=" t.2"]
+    "f" [label=" f.4"]
+    node [fillcolor="#FFFFAA"]
+    "j" [label="j.∞"]
+    "e" [label="e.∞"]
+    "o" [label="o.∞"]
+    "n" [label="n.∞"]
+    "m" [label="m.∞"]
+    edge[labeldistance=1.5 fontsize=12]
+    edge [color="#CC0000" style="solid" dir="forward" taillabel="2"]
+           "a" -> "b" 
+           "t" -> "b" 
+           "f" -> "h" 
+           "t" -> "u" 
+    edge [color="#00BB00" style="solid" dir="forward" taillabel="5"]
+           "b" -> "f" 
+    edge [color="#00BB00" style="solid" dir="forward" taillabel="1"]
+           "i" -> "k" 
+           "i" -> "l" 
+           "g" -> "q" 
+           "h" -> "q" 
+           "c" -> "q" 
+           "b" -> "v" 
+           "u" -> "v" 
+           "b" -> "w" 
+           "d" -> "x" 
+           "b" -> "y" 
+           "c" -> "z" 
+    edge [color="#AAAA00" style="solid" dir="forward" taillabel="∞"]
+           "e" -> "m" 
+           "o" -> "m" 
+           "n" -> "m" 
+           "j" -> "n" 
+           "m" -> "o" 
+    edge [color="#CC0000" style="solid" dir="forward" taillabel="4"]
+           "f" -> "s" 
+    edge [color="#00BB00" style="solid" dir="forward" taillabel="3"]
+           "s" -> "t" 
+    edge [color="black" style="dotted" dir="forward" taillabel="" constraint=false]
+           "b" -> "c" 
+           "c" -> "d" 
+           "b" -> "e" 
+           "d" -> "e" 
+           "s" -> "g" 
+           "e" -> "i" 
+           "i" -> "j" 
+           "i" -> "o" 
+           "e" -> "s" 
+    {rank = max v z y x w q l k}
+    {rank = min f}
+}

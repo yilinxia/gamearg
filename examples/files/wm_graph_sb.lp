@@ -1,0 +1,9 @@
+move(b, a).
+move(c, b).
+move(c, d).
+move(d, b).
+move(d, c).
+move(e, c).
+move(e, d).
+move(f, e).
+move(f, a).

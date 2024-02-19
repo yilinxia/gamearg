@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Xia"
+  given-names: "Yilin"
+  orcid: "https://orcid.org/0000-0003-2500-0245"
+- family-names: "Bowers"
+  given-names: "Shawn"
+  orcid: "https://orcid.org/0000-0002-2972-0197"
+- family-names: "Ludäscher"
+  given-names: "Bertram"
+  orcid: "https://orcid.org/0000-0001-9140-936X"
+title: "gamearg: A Reasoning Tool for Argumentation Framework"
+version: 1.0.0
+# doi:
+date-released: 2024-02-20
+url: "https://github.com/idaks/gamearg"

@@ -1,0 +1,17 @@
+move(a,b).
+move(a,c).
+move(k,l).
+move(c,d).
+move(c,e).
+move(l,e).
+move(l,m).
+move(d,e).
+move(e,d).
+move(e,m).
+move(m,e).
+move(d,f).
+move(d,g).
+move(g,d).
+move(e,h).
+move(m,n).
+move(n,m).

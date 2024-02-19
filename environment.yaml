@@ -1,0 +1,11 @@
+name: gamearg
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - jupyterlab
+  - graphviz
+  - pip
+  - pip:
+    - clingo
+    - pandas
