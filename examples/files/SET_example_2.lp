@@ -1,1 +1,0 @@
-move(1,3). move(1,4). move(2,5). move(3,5). move(4,1).
