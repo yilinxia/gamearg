@@ -4,3 +4,4 @@ dlv.i386-apple-darwin.bin
 __pycache__/
 *.csv
 *.DS_Store
+**.dot
