@@ -17,7 +17,8 @@ class GameArgInput:
         self.keyword = keyword
         self.reverse = reverse
         self.schema = self._load_schema()
-        if target_pred:
+        self.target_pred = target_pred
+        if self.target_pred:
             self.pred_name = target_pred
         else:
             self.pred_name = self._get_pred_name()
@@ -102,10 +103,10 @@ class WfsModel(GameArgInput):
         # Case 1: If the first argument is an instance of GameArgInput
         if args and isinstance(args[0], GameArgInput):
             game_arg_input = args[0]
-            super().__init__(game_arg_input.input_file, game_arg_input.keyword, game_arg_input.reverse)
+            super().__init__(game_arg_input.input_file, game_arg_input.keyword, game_arg_input.reverse, game_arg_input.target_pred)
         # Case 2: If separate parameters are provided
         elif 'input_file' in kwargs and 'keyword' in kwargs:
-            super().__init__(kwargs['input_file'], kwargs['keyword'], kwargs.get('reverse', False))
+            super().__init__(kwargs['input_file'], kwargs['keyword'], kwargs.get('reverse', False), kwargs['target_pred'])
         else:
             raise ValueError("Invalid arguments passed to WfsModel")
         
@@ -180,10 +181,10 @@ class StbModel(GameArgInput):
         # Case 1: If the first argument is an instance of GameArgInput
         if args and isinstance(args[0], GameArgInput):
             game_arg_input = args[0]
-            super().__init__(game_arg_input.input_file, game_arg_input.keyword, game_arg_input.reverse)
+            super().__init__(game_arg_input.input_file, game_arg_input.keyword, game_arg_input.reverse, game_arg_input.target_pred)
         # Case 2: If separate parameters are provided
         elif 'input_file' in kwargs and 'keyword' in kwargs:
-            super().__init__(kwargs['input_file'], kwargs['keyword'], kwargs.get('reverse', False))
+            super().__init__(kwargs['input_file'], kwargs['keyword'], kwargs.get('reverse', False), kwargs['target_pred'])
         else:
             raise ValueError("Invalid arguments passed to WfsModel")
         
