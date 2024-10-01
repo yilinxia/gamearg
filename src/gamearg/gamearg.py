@@ -12,12 +12,15 @@ import numpy as np
 
 
 class GameArgInput:
-    def __init__(self, input_file, keyword, reverse=False):
+    def __init__(self, input_file, keyword, reverse=False, target_pred=None):
         self.input_file = input_file
         self.keyword = keyword
         self.reverse = reverse
         self.schema = self._load_schema()
-        self.pred_name = self._get_pred_name()
+        if target_pred:
+            self.pred_name = target_pred
+        else:
+            self.pred_name = self._get_pred_name()
         (
             self.status_1,
             self.status_2,
@@ -220,12 +223,12 @@ class StbModel(GameArgInput):
             stb_pws[f"pw_{pw_id}"] = {}
             for atom in model:
                 nodes.append(str(atom.arguments[0]))
-                if atom.name == "lost":
+                if atom.name == self.status_2:
                     status_2_ls.append(str(atom.arguments[0]))
-                    stb_pws[f"pw_{pw_id}"]["lost"] = status_2_ls
-                elif atom.name == "won":
+                    stb_pws[f"pw_{pw_id}"][self.status_2] = status_2_ls
+                elif atom.name == self.status_1:
                     status_1_ls.append(str(atom.arguments[0]))
-                    stb_pws[f"pw_{pw_id}"]["won"] = status_1_ls
+                    stb_pws[f"pw_{pw_id}"][self.status_1] = status_1_ls
             pw_id = pw_id + 1
 
         stb_node = pd.DataFrame({"node": list(set(nodes))})
